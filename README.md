@@ -1,6 +1,10 @@
 # LargeDatasetManager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+Angular application for managing a large dataset of items
+
+## Installing Dependency
+
+Run `npm i`
 
 ## Development server
 
