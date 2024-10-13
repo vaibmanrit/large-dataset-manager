@@ -1,0 +1,30 @@
+<div class="item-details-container" *ngIf="item$ | async as item; else loading">
+  <!-- Edit Item Button -->
+
+  <div class="edit-item-container">
+    <button mat-raised-button color="primary" (click)="onEdit(item.id)">
+      Edit Item
+    </button>
+  </div>
+
+  <div class="item-details">
+    <mat-card *ngIf="item" class="item-details-card">
+      <mat-card-header>
+        <mat-card-title>{{ item.name }}</mat-card-title>
+        <mat-card-subtitle
+          >Price: {{ item.price | currency }}</mat-card-subtitle
+        >
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>{{ item.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-container">
+    <p>Loading item details...</p>
+  </div>
+</ng-template>

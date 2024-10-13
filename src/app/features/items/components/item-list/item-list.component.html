@@ -1,0 +1,35 @@
+<div *ngIf="error$ | async as error" class="error">
+  <mat-card color="warn">
+    <mat-card-header>
+      <mat-card-title>Error</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ error }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- Add Item Button -->
+<div class="add-item-container">
+  <button mat-raised-button color="primary" routerLink="/items/add">
+    Add Item
+  </button>
+</div>
+
+<cdk-virtual-scroll-viewport itemSize="200" class="example-viewport">
+  <ng-container *cdkVirtualFor="let item of items$ | async">
+    <app-item-card [item]="item">
+      <div slot="title">
+        <mat-card-title>{{ item.name }}</mat-card-title>
+      </div>
+      <div slot="description">
+        <p>{{ item.description }}</p>
+      </div>
+      <div slot="actions">
+        <button mat-button [routerLink]="['/items/details', item.id]">
+          View Details
+        </button>
+      </div>
+    </app-item-card>
+  </ng-container>
+</cdk-virtual-scroll-viewport>

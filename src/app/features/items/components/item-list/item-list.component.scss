@@ -1,0 +1,46 @@
+:host {
+    display: block; /* Ensure the host is a block element */
+    height: 100%; /* Set height to 100% of its parent */
+    width: 100%;
+  }
+  
+  .example-viewport {
+    height: calc(100% - 64px); /* Adjust the height to fill the available space, assuming 64px for the navbar */
+    width: 100%; /* Full width */
+    overflow: auto; /* Enable scrolling */
+  }
+
+  .add-item-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 16px;
+    margin: 16px 0; // Add margin above and below the button
+  }
+  
+  .item-list-container {
+    display: flex;               // Use flexbox layout
+    flex-direction: column;      // Arrange items in a column
+    align-items: stretch;        // Stretch items to fill the container
+  }
+  
+  
+  .item-card {
+    margin: 16px; // Add margin around the card
+    transition: transform 0.3s, box-shadow 0.3s; // Smooth transitions for hover effects
+    background-color: #fff; // Ensure a white background
+  }
+  
+  // Responsive design for item cards
+  @media (max-width: 900px) {
+    .item-card {
+      margin: 8px; // Reduce margin on medium screens
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .item-card {
+      margin: 4px; // Further reduce margin on small screens
+    }
+  }
+  

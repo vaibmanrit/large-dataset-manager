@@ -1,0 +1,30 @@
+.item-card {
+  margin: 16px; // Add margin around the card
+  transition: transform 0.3s, box-shadow 0.3s; // Smooth transitions for hover effects
+  background-color: #fff; // White background
+  border: 1px solid #ccc; // Add a solid border
+  border-radius: 8px; // Optional: round corners for a softer look
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Optional: soft shadow for depth
+
+  &:hover {
+    transform: scale(1.03); // Slightly scale up on hover
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); // Add a shadow on hover
+  }
+}
+
+// Style for card title
+mat-card-title {
+  font-size: 1.2em; // Increase font size for titles
+  font-weight: bold; // Make the title bold
+}
+
+// Style for card description
+mat-card-content {
+  font-size: 0.9em; // Adjust font size for descriptions
+  color: #555; // Set a grey color for description text
+}
+
+// Style for card actions (buttons)
+mat-card-actions {
+  justify-content: flex-end; // Align actions to the end
+}
